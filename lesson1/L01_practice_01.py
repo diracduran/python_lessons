@@ -8,4 +8,4 @@
 name = 'Dirac'
 hometown = 'Moscow'
 language = 'Python'
-print(name, hometown, language)
+print(name, hometown, language) # Dirac Moscow Python
