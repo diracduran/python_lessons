@@ -22,8 +22,9 @@ if number_of_people < 5:
     print("Вы не являетесь группой")
 elif number_of_people <= 50:
     print("Вы являетесь группой")
-else:
+elif number_of_people > 50:
     print("У нас нет столько мест. Мы пропустим только 50 человек")
+    number_of_people = 50
 
 """
     ЧАСТЬ 2.
@@ -51,9 +52,6 @@ elif group_age <= 17:
 elif group_age <= 64:
     print("полная стоимость билета")
     ticket_sum = ticket_price * number_of_people
-elif group_age >= 65:
-    print("50% от полной стоимости билета")
-    ticket_sum = (ticket_price - (ticket_price / 2)) * number_of_people
 
 """
     ЧАСТЬ 3.
@@ -67,8 +65,6 @@ elif group_age >= 65:
 """
 if ticket_sum == 0:
     print("никаой халявы. платите деньги.")
-elif ticket_sum < 5000:
-    print("попкорн каждому")
 elif ticket_sum < 5000:
     print("попкорн каждому")
 elif ticket_sum < 10000:
