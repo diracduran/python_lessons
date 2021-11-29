@@ -35,8 +35,6 @@ third = items[10]
 
 total_cost = first[1] + second[1] + third[1]
 
-rest_cost = balance - total_cost
-
 if total_cost > balance:
     print('не хватает денег :<')
 elif total_cost < balance:
@@ -44,6 +42,21 @@ elif total_cost < balance:
     my_shop_list.append(first)
     my_shop_list.append(second)
     my_shop_list.append(third)
-    print("осталось: " + str(rest_cost) + ' р.')
+    print("осталось: " + str(balance - total_cost) + ' р.')
 else:
     print('деньги кончились :<')
+
+if balance - total_cost > 0:
+    print('можете купить ещё игр')
+
+    fourth = items[4]
+    total_cost += fourth[1]
+
+    if total_cost < balance:
+        my_shop_list.append(fourth)
+        print('игры ваши :>')
+        print('осталось: ' + str(balance - total_cost) + ' р.')
+    elif total_cost > balance:
+        print('не хватает денег :<')
+    else:
+        print('деньги кончились :<')
