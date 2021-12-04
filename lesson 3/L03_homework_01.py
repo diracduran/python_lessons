@@ -19,6 +19,7 @@ total_cost = 0
 # Ваш код ниже
 first = 0
 second = 5
+third = 10
 
 total_cost = items[first][1] + items[second][1]
 # 1-я покупка
@@ -29,30 +30,15 @@ elif total_cost < balance:
     print('\tигры ваши :>')
     my_shop_list.append(items[first])
     my_shop_list.append(items[second])
+    my_shop_list.append(items[third])
     print("\tосталось: " + str(balance - total_cost) + ' р. можете купить ещё игр')
-
+    print('\tваши покупки: ' + my_shop_list[0][0] + ', ' + my_shop_list[1][0] + ', ' + my_shop_list[2][0])
 else:
     print('\tденьги кончились :<')
-print('ваши покупки: ' + my_shop_list[0][0] + ', ' + my_shop_list[1][0])
+
 
 # 2-я покупка
-print('2-я покупка')
-if balance - total_cost > 0:
-
-    third = 10
-    total_cost += items[third][1]
-
-    if total_cost < balance:
-        my_shop_list.append(items[third])
-        print('\tигры ваши :>')
-        print('\tосталось: ' + str(balance - total_cost) + ' р. можете купить ещё игр')
-    elif total_cost > balance:
-        print('\tне хватает денег :<')
-    else:
-        print('\tденьги кончились :<')
-print('ваши покупки: ' + my_shop_list[0][0] + ', ' + my_shop_list[1][0] + ', ' + my_shop_list[2][0])
-# 3-я покупка
-print('3-я покупка')
+print('\n2-я покупка')
 if balance - total_cost > 0:
 
     fourth = 4
@@ -62,9 +48,8 @@ if balance - total_cost > 0:
         my_shop_list.append(items[fourth])
         print('\tигры ваши :>')
         print('\tосталось: ' + str(balance - total_cost) + ' р.')
+        print('\tваши покупки: ' + my_shop_list[0][0] + ', ' + my_shop_list[1][0] + ', ' + my_shop_list[2][0]+ ', ' + my_shop_list[3][0])
     elif total_cost > balance:
         print('\tне хватает денег :<')
     else:
         print('\tденьги кончились :<')
-
-print('ваши покупки: ' + my_shop_list[0][0] + ', ' + my_shop_list[1][0] + ', ' + my_shop_list[2][0]+ ', ' + my_shop_list[3][0])
