@@ -21,7 +21,7 @@ first = 0
 second = 5
 third = 10
 
-total_cost = items[first][1] + items[second][1] + items[third}[1]
+total_cost = items[first][1] + items[second][1] + items[third][1]
 # 1-я покупка
 print('1-я покупка')
 if total_cost > balance:
