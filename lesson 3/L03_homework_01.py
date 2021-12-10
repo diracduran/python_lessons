@@ -48,6 +48,10 @@ if balance - total_cost > 0:
         print('\tне хватает денег :<')
     else:
         print('\tденьги кончились :<')
+elif total_cost > balance:
+    print('\tне хватает денег :<')
+else:
+    print('\tденьги кончились :<')
 
 
 # 3-я покупка
@@ -63,6 +67,10 @@ if balance - total_cost > 0:
         print('\tне хватает денег :<')
     else:
         print('\tденьги кончились :<')
+elif total_cost > balance:
+    print('\tне хватает денег :<')
+else:
+    print('\tденьги кончились :<')
 
 # # 4-я покупка
 # print('\n4-я покупка')
@@ -78,3 +86,8 @@ if balance - total_cost > 0:
 #         print('\tне хватает денег :<')
 #     else:
 #         print('\tденьги кончились :<')
+# elif total_cost > balance:
+#     print('\tне хватает денег :<')
+# else:
+#     print('\tденьги кончились :<')
+
