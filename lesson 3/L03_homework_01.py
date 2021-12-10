@@ -21,9 +21,10 @@ first = 2
 second = 5
 third = 3
 
-total_cost = items[first][1] + items[second][1] + items[third][1]
+print('Баланс: ' + str(balance))
 # 1-я покупка
 print('1-я покупка')
+total_cost = items[first][1]
 if total_cost > balance:
     print('\tне хватает денег :<')   
 elif total_cost < balance:
@@ -36,10 +37,8 @@ else:
 
 # 2-я покупка
 print('\n2-я покупка')
+total_cost += items[second][1]
 if balance - total_cost > 0:
-
-    total_cost += items[second][1]
-
     if total_cost < balance:
         my_shop_list.append(items[second])
         print('\tигры ваши :>')
@@ -53,10 +52,8 @@ if balance - total_cost > 0:
 
 # 3-я покупка
 print('\n3-я покупка')
+total_cost += items[third][1]
 if balance - total_cost > 0:
-
-    total_cost += items[third][1]
-
     if total_cost < balance:
         my_shop_list.append(items[third])
         print('\tигры ваши :>')
@@ -67,19 +64,17 @@ if balance - total_cost > 0:
     else:
         print('\tденьги кончились :<')
 
-# 4-я покупка
-print('\n4-я покупка')
-if balance - total_cost > 0:
-
-    fourth = 10
-    total_cost += items[fourth][1]
-
-    if total_cost < balance:
-        my_shop_list.append(items[fourth])
-        print('\tигры ваши :>')
-        print('\tосталось: ' + str(balance - total_cost) + ' р.')
-        print('\tваши покупки: ' + my_shop_list[0][0] + ', ' + my_shop_list[1][0] + ', ' + my_shop_list[2][0]+ ', ' + my_shop_list[3][0])
-    elif total_cost > balance:
-        print('\tне хватает денег :<')
-    else:
-        print('\tденьги кончились :<')
+# # 4-я покупка
+# print('\n4-я покупка')
+# fourth = 10
+# total_cost += items[fourth][1]
+# if balance - total_cost > 0:
+#     if total_cost < balance:
+#         my_shop_list.append(items[fourth])
+#         print('\tигры ваши :>')
+#         print('\tосталось: ' + str(balance - total_cost) + ' р.')
+#         print('\tваши покупки: ' + my_shop_list[0][0] + ', ' + my_shop_list[1][0] + ', ' + my_shop_list[2][0]+ ', ' + my_shop_list[3][0])
+#     elif total_cost > balance:
+#         print('\tне хватает денег :<')
+#     else:
+#         print('\tденьги кончились :<')
