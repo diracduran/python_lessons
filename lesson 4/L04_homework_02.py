@@ -18,11 +18,9 @@ variants = ["камень", "ножницы", "бумага"]
     - выведите на экране сообщение о том кто сегодня против кого играет
 
 """
-user_name = input('Введите имя пользователя: ',
-                  ).title()  # здесь должен быть Ваш код
+user_name = input('Введите имя пользователя: ', ).title()  # здесь должен быть Ваш код
 cpu_name = "Компьютер"
-print('Сегодня играет ' + user_name + ' против ' +
-      cpu_name)  # здесь должен быть Ваш код
+print('Сегодня играет ' + user_name + ' против ' + cpu_name)  # здесь должен быть Ваш код
 
 # логика игры Камень, Ножницы, Бумага
 """
@@ -114,29 +112,29 @@ user_points = 0
 cpu_points = 0
 
 while flag:
-    if rounds == 0 or rounds == 2 or rounds == 4 or rounds > 5:
+    if rounds not in [1,3,5]:
         print("Столько раундов мы не играем")
         flag = False
         break
     else:
         while counter <= rounds:
-            user_variant = int(
-                input('Ваш выбор 0 - камень, 1 - ножницы, 2 - бумага : ', ))
+            user_variant = int(input('Ваш выбор 0 - камень, 1 - ножницы, 2 - бумага : ', ))
             if user_variant > 2:
                 print('Неверное значение')
+                continue
             elif user_variant == 0:
-                user_variant = 'камень'
+                user_variant = variants[0]
             elif user_variant == 1:
-                user_variant = 'ножницы'
+                user_variant = variants[1]
             else:
-                user_variant = 'бумага'
+                user_variant = variants[2]
 
             if cpu_variant == 0:
-                cpu_variant = 'камень'
+                cpu_variant = variants[0]
             elif cpu_variant == 1:
-                cpu_variant = 'ножницы'
+                cpu_variant = variants[1]
             else:
-                cpu_variant = 'бумага'
+                cpu_variant = variants[2]
 
             if user_variant == cpu_variant:
                 print(user_name + ': ' + str(user_variant))
@@ -144,9 +142,9 @@ while flag:
                 print("-"*20)
                 user_points += 1
                 cpu_points += 1
+                print("Победила дружба!!!")
                 print('Счет в противостоянии:')
                 print(user_name + ' ' + str(user_points) + ':' + str(cpu_points) + ' ' + cpu_name)
-                print("Победила дружба!!!")
                 counter += 1
             elif user_variant == 'камень':
                 if cpu_variant == 'ножницы':
@@ -154,18 +152,18 @@ while flag:
                     print(cpu_name + ': ' + str(cpu_variant))
                     print("-"*20)
                     user_points += 1
+                    print(user_name + ' ПОБЕДИЛ')
                     print('Счет в противостоянии:')
                     print(user_name + ' ' + str(user_points) + ':' + str(cpu_points) + ' ' + cpu_name)
-                    print(user_name + ' ПОБЕДИЛ')
                     counter += 1
                 elif cpu_variant == 'бумага':
                     print(user_name + ': ' + str(user_variant))
                     print(cpu_name + ': ' + str(cpu_variant))
                     print("-"*20)
                     cpu_points += 1
+                    print(cpu_name + ' ПОБЕДИЛ')
                     print('Счет в противостоянии:')
                     print(user_name + ' ' + str(user_points) + ':' + str(cpu_points) + ' ' + cpu_name)
-                    print(cpu_name + ' ПОБЕДИЛ')
                     counter += 1
 
             elif user_variant == 'ножницы':
@@ -174,18 +172,18 @@ while flag:
                     print(cpu_name + ': ' + str(cpu_variant))
                     print("-"*20)
                     cpu_points += 1
+                    print(cpu_name + ' ПОБЕДИЛ')
                     print('Счет в противостоянии:')
                     print(user_name + ' ' + str(user_points) + ':' + str(cpu_points) + ' ' + cpu_name)
-                    print(cpu_name + ' ПОБЕДИЛ')
                     counter += 1
                 elif cpu_variant == 'бумага':
                     print(user_name + ': ' + str(user_variant))
                     print(cpu_name + ': ' + str(cpu_variant))
                     print("-"*20)
                     user_points += 1
+                    print(user_name + ' ПОБЕДИЛ')
                     print('Счет в противостоянии:')
                     print(user_name + ' ' + str(user_points) + ':' + str(cpu_points) + ' ' + cpu_name)
-                    print(user_name + ' ПОБЕДИЛ')
                     counter += 1
             elif user_variant == 'бумага':
                 if cpu_variant == 'камень':
@@ -193,18 +191,18 @@ while flag:
                     print(cpu_name + ': ' + str(cpu_variant))
                     print("-"*20)
                     user_points += 1
+                    print(user_name + ' ПОБЕДИЛ')
                     print('Счет в противостоянии:')
                     print(user_name + ' ' + str(user_points) + ':' + str(cpu_points) + ' ' + cpu_name)
-                    print(user_name + ' ПОБЕДИЛ')
                     counter += 1
                 elif cpu_variant == 'ножницы':
                     print(user_name + ': ' + str(user_variant))
                     print(cpu_name + ': ' + str(cpu_variant))
                     print("-"*20)
                     cpu_points += 1
+                    print(cpu_name + ' ПОБЕДИЛ')
                     print('Счет в противостоянии:')
                     print(user_name + ' ' + str(user_points) + ':' + str(cpu_points) + ' ' + cpu_name)
-                    print(cpu_name + ' ПОБЕДИЛ')
                     counter += 1
             if counter >= rounds:
                 flag = False
