@@ -36,15 +36,14 @@ excess_word_list = ["песок", "ковёр", "сапоги", "помидор"
 
 game_results = {"correct": 0, "wrong": 0}
 
-count = 0
+for words in the_fifth_wheel.values():
+    question = input("Какое слово лишнее: " + ', '.join(words) + '? ')
+    for excess_word in excess_word_list:
+        if question in excess_word:
+            game_results['wrong'] += 1
+            continue
+        elif  question not in excess_word:
+            game_results['correct'] += 1
+            continue
 
-for round, words in the_fifth_wheel.items():
-    question = input("Какое слово лишнее: " + ', '.join(words) + '? ', )
-    for word in words:
-        for excess_word in excess_word_list:
-            if word == excess_word:
-                game_results['wrong'] += 1
-                count += 1
-            else:
-                game_results['correct'] += 1
-print('Ваш Результат: ' + '\n\t' + str(count) + '/15 ПРАВИЛЬНЫХ ОТВЕТОВ')
+print('Ваш Результат: ' + '\n\t' + str(game_results['wrong']) + '/15 ПРАВИЛЬНЫХ ОТВЕТОВ')
