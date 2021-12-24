@@ -21,16 +21,16 @@ seawords = ["море", "лодка", "корабль", "моряк", "удоч�
 names = ["Иван", "Степан", "Анна", "Алёна", "Игорь"]
 
 def count_vowel(list):
-    #vowels = 'ауоыиэяюёе'
+    vowels = 'ауоыиэяюёе'
     result = {}
     for word in list:
         vow_count = 0
         word = word.lower()
         for letter in word:
-            if letter in 'ауоыиэяюёе':
+            if letter in vowels:
                 vow_count += 1
         result[word] = vow_count
-    print(result)
+    return result
 
 count_vowel(names)
 count_vowel(seawords)
