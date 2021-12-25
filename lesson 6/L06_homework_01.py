@@ -25,5 +25,4 @@ def common_elements(list1, list2):
                 result_common.append(el1)
     return result_common
 
-result_common = common_elements()
-common_elements(cars_1, cars_2)
+result_common = print(common_elements(cars_1, cars_2))

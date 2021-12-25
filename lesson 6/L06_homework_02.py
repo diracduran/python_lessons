@@ -32,5 +32,5 @@ def count_vowel(list):
         result[word] = vow_count
     return result
 
-count_vowel(names)
-count_vowel(seawords)
+print(count_vowel(names))
+print(count_vowel(seawords))
