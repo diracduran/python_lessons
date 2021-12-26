@@ -18,11 +18,11 @@ cars_1 = ['bmw', 'mercedes', 'lexus', 'mazda'] # для проверки
 cars_2 = ['lexus', 'opel', 'bmw', 'kia', 'volvo'] # для проверки
 
 def common_elements(list1, list2):
-    result_common = []
+    result = []
     for el1 in list1:
         for el2 in list2:
             if el1 == el2:
-                result_common.append(el1)
-    return result_common
+                result.append(el1)
+    return result
 
 result_common = print(common_elements(cars_1, cars_2))
