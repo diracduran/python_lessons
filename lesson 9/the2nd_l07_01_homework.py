@@ -90,7 +90,7 @@
 from pip._vendor import requests
 from functools import reduce
 
-API_KEY = '7df31914bc564fc9b2bf1dd51bbd8487'
+API_KEY = 'enter ur api key'
 BASE_URL = 'https://api.football-data.org/v2/'
 headers = {'X-Auth-Token': API_KEY}
 filters={'season':'2020'}
