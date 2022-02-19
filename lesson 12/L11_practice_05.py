@@ -21,7 +21,7 @@ disciplines = ["Основы Python", "Основы JavaScript", "Основы J
 P.S. В задании пункты 1-4 выполняли в задании L11_practice_04.py
 """
 
-class Student:
+class Student():
     def __init__(self, name, lastname, age):
         self.name = name
         self.lastname = lastname

@@ -16,7 +16,7 @@ disciplines = ["Основы Python", "Основы JavaScript", "Основы J
 9. Выведите на экран изучаемые дисциплины для каждого студента
 """
 
-class Student:
+class Student():
     def __init__(self, name, lastname, age):
         self.name = name
         self.lastname = lastname

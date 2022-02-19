@@ -7,7 +7,7 @@
 4. Выведите на экран кличку и возраст питомца, обращаясь к атрибутам dog
 """
 
-class Dog:
+class Dog():
     def __init__(self, name, age):
         self.name = name
         self.age = age

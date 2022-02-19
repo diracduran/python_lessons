@@ -9,7 +9,7 @@
 4. Примените два метода show_details() и sit_down() к экземпляру pretty_dog
 """
 
-class Dog:
+class Dog():
     def __init__(self, name, age):
         self.name = name
         self.age = age

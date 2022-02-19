@@ -4,7 +4,7 @@
 1. Создайте 3 любых класса, у которых будут 3 атрибута и 1 метод
 """
 
-class Song:
+class Song():
     def __init__(self, singer, song_name, play_time):
         self.singer = singer
         self.song_name = song_name
