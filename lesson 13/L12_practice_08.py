@@ -6,4 +6,12 @@
     print(square) --> 13 на 13 на 13 на 13
 """
 
-# Ваш код ниже
+class Square:
+    def __init__(self, a):
+        self.a = a
+
+    def __repr__(self):
+        return f'{self.a} на {self.a} на {self.a} на {self.a}'
+
+square = Square(13)
+print(square) # 13 на 13 на 13 на 13
