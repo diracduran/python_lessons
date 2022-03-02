@@ -11,4 +11,37 @@
 8. Создайте 3 университета и зачислите по 3 студента и по 2 учителя в каждый.
 """
 
-# Ваш код ниже
+class University:
+    students = []
+    teachers = []
+    def __init__(self, title, city):
+        self.title = title,
+        self.city = city
+
+    def add_person(self, new_person):
+        if new_person.role == 'student':
+            self.students.append(new_person)
+        elif new_person.role == 'teacher':
+            self.teachers.append(new_person)
+    
+    def show_student_list(self):
+        for student in self.students:
+            print(student)
+
+    def show_teacher_list(self):
+        for teacher in self.teachers:
+            print(teacher)
+
+class Student:
+    def __init__(self, name, lastname, age):
+        self.name = name,
+        self.lastname = lastname,
+        self.age = age,
+        self.role = 'student'
+
+class Teacher:
+    def __init__(self, name, lastname, age):
+        self.name = name,
+        self.lastname = lastname,
+        self.age = age,
+        self.role = 'teacher'
