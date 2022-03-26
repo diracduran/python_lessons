@@ -331,18 +331,15 @@ def get_random_images(category, q):
         "image_type": "photo",
         "min_width": 1920,
         "min_height": 1080,
-        "category": category
+        "category": category,
+        "q": q
     }
     """Функция для получения списка ссылок на изображения по заданным параметрам"""
     res = requests.get(BASE_URL, params=params)
     data = res.json()
-    response = []
-    if params['category'] in CATEGORIES:
-        # pics_dict = {k: v for k, v in pics.items()}
-        # response = [p for p in pics_dict if p == pics_dict['largeImageURL']][:13]
-        for d in data['hits']:
-            response.append(d['largeImageURL'])
-    return response[:13]
+    # if (params['category'] in CATEGORIES and params['q'] == '') or (params['category'] == '' and params['q'] != ''): # ?????
+    response = [d['largeImageURL'] for d in data['hits'] if params['category'] in CATEGORIES or params['q'] == q][:13]
+    return response
 
 ##### END PART 1 #####
 
@@ -391,6 +388,7 @@ def create_calendar_pdf(pdf_filename, calendar_image_pull):
     pdf.output(pdf_filename)
 
 
+
 # main
 if __name__ == '__main__':
     print("Добро пожаловать в Calendar Maker!!!\n")
@@ -399,11 +397,30 @@ if __name__ == '__main__':
     # Ваш код ниже
     
     # Запрос Года
-    YEAR = YEAR
+    while True:
+        try:
+            YEAR = int(input('На какой год Вы хотите создать календарь? '))
+        except ValueError:
+            print('Вы ввели недопустимое значение! Попробуйте снова!')
+            continue
+        if YEAR < 1900 or YEAR > 2049:
+            print('Вы ввели значение вне диапазона от 1900 до 2049')
+            continue
+        else:
+            break
+
 
     # Запрос Изображения
-    MY_OWN = ''
-    CATEGORY = ''
+    question = input('Введите число, чтобы выбрать категорию от 1 до 19\n1 - fashion\n2 - nature\n3 - backgrounds\n4 - science\n5 - education\n6 - people\n7 - feelings\n8 - religion\n9 - health\n10 - places\n11 - animals\n12 - industry\n13 - food\n14 - computer\n15 - sports\n16 - transportation\n17 - travel\n18 - buildings\n19 - music\nЕсли Вы хотите подобрать изображения через поиск, то введите <my own>\nЕсли Вы хотите выбрать случайную категорию, то введите <random>\nВведите число от 1 до 19, <my own> или <random>:')
+    if question.isnumeric:
+        CATEGORY = question
+        get_random_images(category=CATEGORY, q='')
+    elif not question.isnumeric() and question!='random':
+        MY_OWN = question
+        get_random_images(category='', q=MY_OWN)
+    elif question == 'random':
+        get_random_images(category=CATEGORIES[random.randint(1, len(CATEGORIES))], q='')
+
 
     # Запрос Цвета
     USER_RED = DEFAULT_R

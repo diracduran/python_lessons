@@ -25,8 +25,8 @@ def collect_images():
 if __name__ == '__main__':
     CATEGORIES = ['fashion', 'nature', 'backgrounds', 'science', 'education', 'people', 'feelings', 'religion', 'health', 'places', 'animals', 'industry', 'food', 'computer', 'sports', 'transportation', 'travel', 'buildings', 'music']
 
-    question = input('Choose category. ')
+    question = input('Choose category. Or enter "random". ')
     flag = False
-    if question in CATEGORIES or question == '':
+    if question in CATEGORIES or question == 'random':
         flag = True
         collect_images()
