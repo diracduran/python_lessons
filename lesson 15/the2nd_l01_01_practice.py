@@ -11,12 +11,23 @@ URL = 'https://icanhazdadjoke.com/'
 
 HEADERS = {'Accept': 'application/json'}
 
-res = requests.get(URL, headers=HEADERS)
+search_url = 'search'
+params = {
+	'limit': 7
+}
+
+res = requests.get(URL + search_url, headers=HEADERS, params=params)
 
 json_res = res.json()
 
-jokes_dict = {k: v for k, v in json_res.items()}
-
-jokes = [joke for joke in jokes_dict if joke == jokes_dict['joke']][:8]
+jokes = [joke['joke'] for joke in json_res['results']]
 
 print("Задание 1:\n" + "\n".join(jokes))
+"""
+I'm tired of following my dreams. I'm just going to ask them where they are going and meet up with them later.
+Did you hear about the guy whose whole left side was cut off? He's all right now.
+Why didn’t the skeleton cross the road? Because he had no guts.
+What did one nut say as he chased another nut?  I'm a cashew!
+I knew I shouldn't steal a mixer from work, but it was a whisk I was willing to take.
+How come the stadium got hot after the game? Because all of the fans left.
+"""
