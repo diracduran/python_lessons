@@ -15,8 +15,12 @@ URL = 'https://icanhazdadjoke.com/'
 
 
 HEADERS = {'Accept': 'application/json'}
+search_url = 'search'
+params = {
+	'limit': 7
+}
 
-res = requests.get(URL, headers=HEADERS)
+res = requests.get(URL + search_url, headers=HEADERS, params=params)
 
 data = res.json()
 
@@ -30,7 +34,7 @@ for joke in data['results']:
 
     png_item = PNG_PATH + '.png'
 
-    with open(f'd:\\study_projects\\python_lessons\\lesson_15\\jokes_pngs\\{png_item}', 'wb', encoding='utf-8') as f:
+    with open('D:/study_projects/python_lessons/lesson_15/jokes_pngs/' + PNG_PATH, 'wb') as f:
         f.write(png_content)
 
 
