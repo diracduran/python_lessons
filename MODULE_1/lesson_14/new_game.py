@@ -202,7 +202,7 @@ class Game:
             if solution in word_list:
                 solution_list.append(solution)
             else:
-                print(f"Слова '{solution}' нет в списке слов")
+                print(f"\nСлова '{solution}' нет в списке слов\n")
         self.player.profile['current_level'] = self.current_level
         self.player.profile.update({f"level_{self.current_level}": {
                 "word": self.word, 
