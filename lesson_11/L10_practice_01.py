@@ -14,7 +14,7 @@ import json
 words = ['sea', 'belt', 'garbage', 'river', 'house', 'school', 'boomerang', 'constructor', 'python', 'JavaScript', 'train']
 vowels = 'aeuoiy'
 consonants = 'qwrtpsdfghjklzxcvbnm'
-filename = 'd:\\study_projects\\python_lessons\\lesson 11\\hw_files\\L10_practice_01.json'
+filename = 'd:\\study_projects\\python_repos\\python_lessons\\lesson 11\\hw_files\\L10_practice_01.json'
 
 def word_stat(some_list, fname):
     res = {}

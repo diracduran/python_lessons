@@ -7,12 +7,12 @@
 
 # 1-й способ
 
-opened_file = open('d:\\study_projects\\python_lessons\\lesson 10\\txt_files\\full_name.txt', encoding='utf-8')
+opened_file = open('d:\\study_projects\\python_repos\\python_lessons\\lesson 10\\txt_files\\full_name.txt', encoding='utf-8')
 read_file = opened_file.read()
 print(read_file) # Романова Елизавета Евгеньевна
 opened_file.close()
 
 #2-й способ
 
-with open('d:\\study_projects\\python_lessons\\lesson 10\\txt_files\\full_name.txt', encoding='utf-8') as f:
+with open('d:\\study_projects\\python_repos\\python_lessons\\lesson 10\\txt_files\\full_name.txt', encoding='utf-8') as f:
     print(f.read()) # Романова Елизавета Евгеньевна

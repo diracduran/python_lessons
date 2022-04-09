@@ -7,7 +7,7 @@
 4. В случае продолжить - продолжайте, но имейте в виду, что каждая запись в файле должна быть с новой строки. 
 """
 
-file = 'd:\\study_projects\\python_lessons\\lesson 10\\txt_files\\noties.txt'
+file = 'd:\\study_projects\\python_repos\\python_lessons\\lesson 10\\txt_files\\noties.txt'
 
 with open(file, mode='a', encoding='utf-8') as f:
     while True:

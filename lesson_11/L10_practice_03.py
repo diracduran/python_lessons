@@ -9,7 +9,7 @@ P.S. Файл csv можно создать любым способом...
 import csv
 
 
-filename = 'd:\\study_projects\\python_lessons\\lesson 11\\hw_files\\visit_log.csv'
+filename = 'd:\\study_projects\\python_repos\\python_lessons\\lesson 11\\hw_files\\visit_log.csv'
 
 headers=['name', 'surname', 'age', 'document', 'number']
 

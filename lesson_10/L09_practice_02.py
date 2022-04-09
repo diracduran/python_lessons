@@ -13,7 +13,7 @@
 Если нет, то вывести сообщение: «Файл не закрыт»
 """
 
-opened_file = open('d:\\study_projects\\python_lessons\\lesson 10\\txt_files\\my_noties.txt', encoding='utf-8')
+opened_file = open('d:\\study_projects\\python_repos\\python_lessons\\lesson 10\\txt_files\\my_noties.txt', encoding='utf-8')
 read_file = opened_file.read()
 print(read_file) 
 """

@@ -9,8 +9,8 @@ import csv
 import json
 
 
-filename = 'd:\\study_projects\\python_lessons\\lesson 11\\_countries.csv'
-json_filename = 'd:\\study_projects\\python_lessons\\lesson 11\\hw_files\\_countries.json'
+filename = 'd:\\study_projects\\python_repos\\python_lessons\\lesson 11\\_countries.csv'
+json_filename = 'd:\\study_projects\\python_repos\\python_lessons\\lesson 11\\hw_files\\_countries.json'
 
 with open(filename, 'r', encoding='utf-8') as f:
     reader = csv.reader(f, delimiter=',')

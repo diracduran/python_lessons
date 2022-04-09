@@ -13,6 +13,6 @@
 4. Выведите на экран содержимое переменной my_bio_by_line.
 """
 
-with open('d:\\study_projects\\python_lessons\\lesson 10\\txt_files\\my_short_bio.txt', encoding='utf-8') as f:
+with open('d:\\study_projects\\python_repos\\python_lessons\\lesson 10\\txt_files\\my_short_bio.txt', encoding='utf-8') as f:
     bio_by_line = f.readline() # 1) Романова Е. Е.
     print(bio_by_line)

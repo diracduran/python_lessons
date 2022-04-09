@@ -17,7 +17,7 @@
 
 Если нет, то вывести сообщение: «Файл не закрыт» 
 """
-file = 'd:\\study_projects\\python_lessons\\lesson 10\\txt_files\\quotes.txt'
+file = 'd:\\study_projects\\python_repos\\python_lessons\\lesson 10\\txt_files\\quotes.txt'
 
 
 with open(file, encoding='utf-8') as f:

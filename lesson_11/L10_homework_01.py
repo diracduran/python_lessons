@@ -28,19 +28,19 @@ headers = [
 ]
 
 filenames = [
-    'd:\\study_projects\\python_lessons\\lesson 11\\reports\\r1.txt',
-    'd:\\study_projects\\python_lessons\\lesson 11\\reports\\r2.txt',
-    'd:\\study_projects\\python_lessons\\lesson 11\\reports\\r3.txt',
-    'd:\\study_projects\\python_lessons\\lesson 11\\reports\\r4.txt',
-    'd:\\study_projects\\python_lessons\\lesson 11\\reports\\r5.txt',
-    'd:\\study_projects\\python_lessons\\lesson 11\\reports\\r6.txt',
-    'd:\\study_projects\\python_lessons\\lesson 11\\reports\\r7.txt',
-    'd:\\study_projects\\python_lessons\\lesson 11\\reports\\r8.txt',
-    'd:\\study_projects\\python_lessons\\lesson 11\\reports\\r9.txt',
-    'd:\\study_projects\\python_lessons\\lesson 11\\reports\\r10.txt'
+    'd:\\study_projects\\python_repos\\python_lessons\\lesson 11\\reports\\r1.txt',
+    'd:\\study_projects\\python_repos\\python_lessons\\lesson 11\\reports\\r2.txt',
+    'd:\\study_projects\\python_repos\\python_lessons\\lesson 11\\reports\\r3.txt',
+    'd:\\study_projects\\python_repos\\python_lessons\\lesson 11\\reports\\r4.txt',
+    'd:\\study_projects\\python_repos\\python_lessons\\lesson 11\\reports\\r5.txt',
+    'd:\\study_projects\\python_repos\\python_lessons\\lesson 11\\reports\\r6.txt',
+    'd:\\study_projects\\python_repos\\python_lessons\\lesson 11\\reports\\r7.txt',
+    'd:\\study_projects\\python_repos\\python_lessons\\lesson 11\\reports\\r8.txt',
+    'd:\\study_projects\\python_repos\\python_lessons\\lesson 11\\reports\\r9.txt',
+    'd:\\study_projects\\python_repos\\python_lessons\\lesson 11\\reports\\r10.txt'
     ]
 
-report = 'd:\\study_projects\\python_lessons\\lesson 11\\reports\\report.csv'
+report = 'd:\\study_projects\\python_repos\\python_lessons\\lesson 11\\reports\\report.csv'
 
 
 def read_files(fnames):
