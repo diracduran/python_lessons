@@ -11,7 +11,7 @@ import csv
 
 
 # считывание БД слов с определениями nouns.csv и сохранение в виде словаря "слово": "определение" в переменную WORDS_WITH_DEFINITIONS
-with open("d:\\study_projects\\python_lessons\\lesson_14\\nouns.csv", "r", encoding='utf-8') as csv_file:
+with open("d:\\study_projects\\python_repos\\python_lessons\\MODULE_1\\lesson_14\\nouns.csv", "r", encoding='utf-8') as csv_file:
 	reader = csv.reader(csv_file, delimiter=',') # объект csv для чтения функция reader
 	data = [] # пустой список для сохранения прочитанных данных
 	for row in reader:

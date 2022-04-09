@@ -130,7 +130,7 @@ import json
 
 GAME_WORDS = []
 
-with open("d:\\study_projects\\python_lessons\\lesson_14\\nouns.csv", "r", encoding="utf-8") as csv_file:
+with open("d:\\study_projects\\python_repos\\python_lessons\\MODULE_1\\lesson_14\\nouns.csv", "r", encoding="utf-8") as csv_file:
 	reader = csv.reader(csv_file, delimiter=',') # объект csv для чтения функция reader
 	data = [row for row in reader] # пустой список для сохранения прочитанных данных
 	# for row in reader:
@@ -172,7 +172,7 @@ class Game:
         self.min = 9
 
     def save_game_results(self):
-        with open(f"d:\\study_projects\\python_lessons\\lesson_14\\{self.player.name}.json", 'w', encoding='utf-8') as f:
+        with open(f"d:\\study_projects\\python_repos\\python_lessons\\MODULE_1\\lesson_14\\{self.player.name}.json", 'w', encoding='utf-8') as f:
             json.dump(self.player.profile, f, ensure_ascii=False)
 
     def set_player(self):
@@ -198,7 +198,11 @@ class Game:
             print(f"БУКВЫ: {letters}")
             print(f"УГАДАННЫЕ СЛОВА: {solution_list}")
             solution = input('Составьте слово: ')
-            solution_list.append(solution)
+            word_list = create_word_list(self.word)
+            if solution in word_list:
+                solution_list.append(solution)
+            else:
+                print(f"Слова '{solution}' нет в списке слов")
         self.player.profile['current_level'] = self.current_level
         self.player.profile.update({f"level_{self.current_level}": {
                 "word": self.word, 
@@ -209,7 +213,6 @@ class Game:
                 "need_to_next_level": self.min,
                 "is_done": True if len(solution_list) >= self.min else False,
                 }})
-        
         self.save_game_results()
         self.game_flag = False
     
